@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>BMI Kalkulator</title>
+    <style>
+        .color {
+            background-color: green;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 <h1>Kalkulator BMI</h1>
@@ -11,7 +17,7 @@
     <input type="text" id="waga" th:field="*{waga}" required><br><br>
     <label for="wzrost">Wzrost (cm):</label>
     <input type="text" id="wzrost" th:field="*{wzrost}" required><br><br>
-    <input type="submit" value="Oblicz">
+    <input type="submit" value="Oblicz" class="color">
 </form>
 </body>
 </html>

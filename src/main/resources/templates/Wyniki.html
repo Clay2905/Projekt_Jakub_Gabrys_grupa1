@@ -2,11 +2,16 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Wynik BMIt</title>
+    <title>Wynik BMI</title>
+    <style>
+        .red-text {
+            color: red;
+        }
+    </style>
 </head>
 <body>
 <h1>Wynik BMI</h1>
-<p>Twoje BMI wynosi:: <span th:text="${bmi}"></span></p>
-<p>Masz: <span th:text="${bmiCategory}"></span></p>
+<p>Twoje BMI wynosi: <span th:text="${bmi}"></span></p>
+<p>Masz: <span th:text="${bmiCategory}" th:class="${bmiCategory == 'nadwaga' || bmiCategory == 'otyłość 1 stopnia' || bmiCategory == 'otyłość skrajna' } ? 'red-text'"></span></p>
 </body>
 </html>
